@@ -10,7 +10,8 @@
 3. **커밋 생성**: `git commit -m "린트 에러 수정 및 한국 시간(KST) 적용"`
 4. **GitHub로 푸시**: `git push origin main`
 
-### 처음부터 연동하는 경우 (참고용)
+### 처음부터 연동하는 경우 (프로젝트 명 변경 대비)
+GitHub에서 생성한 실제 저장소 이름에 맞춰 URL을 변경해야 합니다.
 ```bash
 # Git 저장소 초기화
 git init
@@ -24,11 +25,18 @@ git commit -m "초기 설정 및 배포 준비"
 # 기본 브랜치명 변경 (main)
 git branch -M main
 
-# 원격 저장소 연결
+# 원격 저장소 연결 (URL에 실제 프로젝트 명 입력)
+# 예: https://github.com/ktx21ktx/<실제-저장소-이름>.git
 git remote add origin https://github.com/ktx21ktx/bhhan7.git
 
 # GitHub로 푸시
 git push -u origin main
+```
+
+### 연결된 저장소 주소 변경 (유지관리)
+프로젝트 이름을 바꾸거나 다른 저장소로 옮길 때 사용합니다.
+```bash
+git remote set-url origin <새로운-저장소-URL>
 ```
 
 ## 2. Supabase 설정 (Supabase)
