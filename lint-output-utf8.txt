@@ -1,0 +1,39 @@
+﻿
+C:\Antigravity\20260302(mind weather, 諛고룷)\mind-weather\src\components\AuthHeader.tsx
+   8:38  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+  30:8   warning  React Hook useEffect has a missing dependency: 'supabase.auth'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Antigravity\20260302(mind weather, 諛고룷)\mind-weather\src\components\CalendarView.tsx
+  31:9  error    Error: Cannot access variable before it is declared
+
+`fetchDiaries` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\Antigravity\20260302(mind weather, 諛고룷)\mind-weather\src\components\CalendarView.tsx:31:9
+  29 |
+  30 |     useEffect(() => {
+> 31 |         fetchDiaries();
+     |         ^^^^^^^^^^^^ `fetchDiaries` accessed before it is declared
+  32 |     }, []);
+  33 |
+  34 |     const fetchDiaries = async () => {
+
+C:\Antigravity\20260302(mind weather, 諛고룷)\mind-weather\src\components\CalendarView.tsx:34:5
+  32 |     }, []);
+  33 |
+> 34 |     const fetchDiaries = async () => {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |         const { data: { session } } = await supabase.auth.getSession();
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 36 |         if (!session?.user) {
+     ??     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 49 |         setIsLoading(false);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 50 |     };
+     | ^^^^^^^ `fetchDiaries` is declared here
+  51 |
+  52 |     const getDiaryForDay = (date: Date) => {
+  53 |         return diaries.find(  react-hooks/immutability
+  32:8  warning  React Hook useEffect has a missing dependency: 'fetchDiaries'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         react-hooks/exhaustive-deps
+
+??4 problems (2 errors, 2 warnings)
+
