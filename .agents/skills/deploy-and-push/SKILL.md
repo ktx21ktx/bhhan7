@@ -14,7 +14,8 @@
    - `git commit -m "[변경사항 요약]"`
    - `git push`
    - `vercel --prod`
-4. 배포 완료 후 제공되는 Vercel URL을 통해 정상 작동 여부를 확인합니다.
+4. 배포 완료 후 아래 서비스 주소를 통해 정상 작동 여부를 확인합니다.
+   - **라이브 서비스 주소**: [https://bhhan7-plv9.vercel.app](https://bhhan7-plv9.vercel.app)
 
 ## 예시 프롬프트
 "지금까지 한 작업들 다 깃에 올리고 버셀 배포해줘"
